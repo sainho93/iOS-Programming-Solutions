@@ -10,13 +10,13 @@
 		8391F25823A053C300A932F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8391F25723A053C300A932F5 /* AppDelegate.swift */; };
 		8391F25A23A053C300A932F5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8391F25923A053C300A932F5 /* SceneDelegate.swift */; };
 		8391F25C23A053C300A932F5 /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8391F25B23A053C300A932F5 /* ConversionViewController.swift */; };
-		8391F25F23A053C300A932F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8391F25D23A053C300A932F5 /* Main.storyboard */; };
 		8391F26123A053C500A932F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8391F26023A053C500A932F5 /* Assets.xcassets */; };
-		8391F26423A053C500A932F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8391F26223A053C500A932F5 /* LaunchScreen.storyboard */; };
 		8391F26F23A053C500A932F5 /* WorldTrotterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8391F26E23A053C500A932F5 /* WorldTrotterTests.swift */; };
 		8391F27A23A053C500A932F5 /* WorldTrotterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8391F27923A053C500A932F5 /* WorldTrotterUITests.swift */; };
 		D8F3383525C1A7B20089D6FB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F3383425C1A7B20089D6FB /* MapViewController.swift */; };
 		D8F3384025C1ABBD0089D6FB /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F3383F25C1ABBD0089D6FB /* QuizViewController.swift */; };
+		D8F3388725C2AB020089D6FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8F3388625C2AB020089D6FB /* LaunchScreen.storyboard */; };
+		D8F3389225C2AB160089D6FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8F3389125C2AB160089D6FB /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,9 +41,7 @@
 		8391F25723A053C300A932F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8391F25923A053C300A932F5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8391F25B23A053C300A932F5 /* ConversionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionViewController.swift; sourceTree = "<group>"; };
-		8391F25E23A053C300A932F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8391F26023A053C500A932F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8391F26323A053C500A932F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8391F26523A053C500A932F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8391F26A23A053C500A932F5 /* WorldTrotterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorldTrotterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8391F26E23A053C500A932F5 /* WorldTrotterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTrotterTests.swift; sourceTree = "<group>"; };
@@ -53,6 +51,8 @@
 		8391F27B23A053C500A932F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8F3383425C1A7B20089D6FB /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		D8F3383F25C1ABBD0089D6FB /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		D8F3388625C2AB020089D6FB /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D8F3389125C2AB160089D6FB /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,14 +103,12 @@
 		8391F25623A053C300A932F5 /* WorldTrotter */ = {
 			isa = PBXGroup;
 			children = (
-				D8F3383F25C1ABBD0089D6FB /* QuizViewController.swift */,
+				D8F3388225C2AA0D0089D6FB /* ViewController */,
 				8391F25723A053C300A932F5 /* AppDelegate.swift */,
 				8391F25923A053C300A932F5 /* SceneDelegate.swift */,
-				8391F25B23A053C300A932F5 /* ConversionViewController.swift */,
-				D8F3383425C1A7B20089D6FB /* MapViewController.swift */,
-				8391F25D23A053C300A932F5 /* Main.storyboard */,
+				D8F3388625C2AB020089D6FB /* LaunchScreen.storyboard */,
+				D8F3389125C2AB160089D6FB /* Main.storyboard */,
 				8391F26023A053C500A932F5 /* Assets.xcassets */,
-				8391F26223A053C500A932F5 /* LaunchScreen.storyboard */,
 				8391F26523A053C500A932F5 /* Info.plist */,
 			);
 			path = WorldTrotter;
@@ -132,6 +130,16 @@
 				8391F27B23A053C500A932F5 /* Info.plist */,
 			);
 			path = WorldTrotterUITests;
+			sourceTree = "<group>";
+		};
+		D8F3388225C2AA0D0089D6FB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D8F3383425C1A7B20089D6FB /* MapViewController.swift */,
+				D8F3383F25C1ABBD0089D6FB /* QuizViewController.swift */,
+				8391F25B23A053C300A932F5 /* ConversionViewController.swift */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,9 +246,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8391F26423A053C500A932F5 /* LaunchScreen.storyboard in Resources */,
+				D8F3389225C2AB160089D6FB /* Main.storyboard in Resources */,
+				D8F3388725C2AB020089D6FB /* LaunchScreen.storyboard in Resources */,
 				8391F26123A053C500A932F5 /* Assets.xcassets in Resources */,
-				8391F25F23A053C300A932F5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,25 +311,6 @@
 			targetProxy = 8391F27623A053C500A932F5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		8391F25D23A053C300A932F5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8391F25E23A053C300A932F5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		8391F26223A053C500A932F5 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8391F26323A053C500A932F5 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		8391F27C23A053C500A932F5 /* Debug */ = {
@@ -445,13 +434,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = Y6RF66Q8AS;
 				INFOPLIST_FILE = WorldTrotter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bignerdranch.WorldTrotter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MADEStudio.WorldTrotter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -463,13 +452,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = Y6RF66Q8AS;
 				INFOPLIST_FILE = WorldTrotter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bignerdranch.WorldTrotter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MADEStudio.WorldTrotter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

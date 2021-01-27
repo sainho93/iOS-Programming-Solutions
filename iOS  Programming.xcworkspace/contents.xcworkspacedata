@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:01-Simple/Quiz/Quiz.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "container:03-View/WorldTrotter/WorldTrotter.xcodeproj">
+   </FileRef>
+</Workspace>
