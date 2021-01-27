@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		8391F25823A053C300A932F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8391F25723A053C300A932F5 /* AppDelegate.swift */; };
 		8391F25A23A053C300A932F5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8391F25923A053C300A932F5 /* SceneDelegate.swift */; };
-		8391F25C23A053C300A932F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8391F25B23A053C300A932F5 /* ViewController.swift */; };
+		8391F25C23A053C300A932F5 /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8391F25B23A053C300A932F5 /* ConversionViewController.swift */; };
 		8391F25F23A053C300A932F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8391F25D23A053C300A932F5 /* Main.storyboard */; };
 		8391F26123A053C500A932F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8391F26023A053C500A932F5 /* Assets.xcassets */; };
 		8391F26423A053C500A932F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8391F26223A053C500A932F5 /* LaunchScreen.storyboard */; };
 		8391F26F23A053C500A932F5 /* WorldTrotterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8391F26E23A053C500A932F5 /* WorldTrotterTests.swift */; };
 		8391F27A23A053C500A932F5 /* WorldTrotterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8391F27923A053C500A932F5 /* WorldTrotterUITests.swift */; };
+		D8F3383525C1A7B20089D6FB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F3383425C1A7B20089D6FB /* MapViewController.swift */; };
+		D8F3384025C1ABBD0089D6FB /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F3383F25C1ABBD0089D6FB /* QuizViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +40,7 @@
 		8391F25423A053C300A932F5 /* WorldTrotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldTrotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8391F25723A053C300A932F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8391F25923A053C300A932F5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8391F25B23A053C300A932F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8391F25B23A053C300A932F5 /* ConversionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionViewController.swift; sourceTree = "<group>"; };
 		8391F25E23A053C300A932F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8391F26023A053C500A932F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8391F26323A053C500A932F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +51,8 @@
 		8391F27523A053C500A932F5 /* WorldTrotterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorldTrotterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8391F27923A053C500A932F5 /* WorldTrotterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTrotterUITests.swift; sourceTree = "<group>"; };
 		8391F27B23A053C500A932F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8F3383425C1A7B20089D6FB /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		D8F3383F25C1ABBD0089D6FB /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +103,11 @@
 		8391F25623A053C300A932F5 /* WorldTrotter */ = {
 			isa = PBXGroup;
 			children = (
+				D8F3383F25C1ABBD0089D6FB /* QuizViewController.swift */,
 				8391F25723A053C300A932F5 /* AppDelegate.swift */,
 				8391F25923A053C300A932F5 /* SceneDelegate.swift */,
-				8391F25B23A053C300A932F5 /* ViewController.swift */,
+				8391F25B23A053C300A932F5 /* ConversionViewController.swift */,
+				D8F3383425C1A7B20089D6FB /* MapViewController.swift */,
 				8391F25D23A053C300A932F5 /* Main.storyboard */,
 				8391F26023A053C500A932F5 /* Assets.xcassets */,
 				8391F26223A053C500A932F5 /* LaunchScreen.storyboard */,
@@ -259,9 +265,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8391F25C23A053C300A932F5 /* ViewController.swift in Sources */,
+				D8F3384025C1ABBD0089D6FB /* QuizViewController.swift in Sources */,
+				8391F25C23A053C300A932F5 /* ConversionViewController.swift in Sources */,
 				8391F25823A053C300A932F5 /* AppDelegate.swift in Sources */,
 				8391F25A23A053C300A932F5 /* SceneDelegate.swift in Sources */,
+				D8F3383525C1A7B20089D6FB /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,7 +374,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -420,7 +428,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
