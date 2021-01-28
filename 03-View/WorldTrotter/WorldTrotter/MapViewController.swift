@@ -58,7 +58,7 @@ class MapViewController: UIViewController {
         
         // switch
         let pointSwitch = UISwitch()
-        pointSwitch.isOn = true
+        pointSwitch.isOn = true // set default as true
         
         pointSwitch.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(pointSwitch)
