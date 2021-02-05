@@ -13,6 +13,7 @@
 		8391F26123A053C500A932F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8391F26023A053C500A932F5 /* Assets.xcassets */; };
 		8391F26F23A053C500A932F5 /* WorldTrotterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8391F26E23A053C500A932F5 /* WorldTrotterTests.swift */; };
 		8391F27A23A053C500A932F5 /* WorldTrotterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8391F27923A053C500A932F5 /* WorldTrotterUITests.swift */; };
+		D8C5BC8125C9AC3700F7BEF3 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C5BC8025C9AC3700F7BEF3 /* LocationManager.swift */; };
 		D8F3383525C1A7B20089D6FB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F3383425C1A7B20089D6FB /* MapViewController.swift */; };
 		D8F3384025C1ABBD0089D6FB /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F3383F25C1ABBD0089D6FB /* QuizViewController.swift */; };
 		D8F3388725C2AB020089D6FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8F3388625C2AB020089D6FB /* LaunchScreen.storyboard */; };
@@ -49,6 +50,7 @@
 		8391F27523A053C500A932F5 /* WorldTrotterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorldTrotterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8391F27923A053C500A932F5 /* WorldTrotterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTrotterUITests.swift; sourceTree = "<group>"; };
 		8391F27B23A053C500A932F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8C5BC8025C9AC3700F7BEF3 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		D8F3383425C1A7B20089D6FB /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		D8F3383F25C1ABBD0089D6FB /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		D8F3388625C2AB020089D6FB /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				D8F3389125C2AB160089D6FB /* Main.storyboard */,
 				8391F26023A053C500A932F5 /* Assets.xcassets */,
 				8391F26523A053C500A932F5 /* Info.plist */,
+				D8C5BC8025C9AC3700F7BEF3 /* LocationManager.swift */,
 			);
 			path = WorldTrotter;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				8391F25C23A053C300A932F5 /* ConversionViewController.swift in Sources */,
 				8391F25823A053C300A932F5 /* AppDelegate.swift in Sources */,
 				8391F25A23A053C300A932F5 /* SceneDelegate.swift in Sources */,
+				D8C5BC8125C9AC3700F7BEF3 /* LocationManager.swift in Sources */,
 				D8F3383525C1A7B20089D6FB /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -440,6 +444,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.MADEStudio.WorldTrotter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -458,6 +463,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.MADEStudio.WorldTrotter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

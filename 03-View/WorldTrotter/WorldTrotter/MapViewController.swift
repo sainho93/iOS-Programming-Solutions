@@ -10,6 +10,7 @@
 import UIKit
 import MapKit
 
+
 class MapViewController: UIViewController {
     var mapView: MKMapView!
 
@@ -71,10 +72,12 @@ class MapViewController: UIViewController {
         
         pointSwitch.addTarget(self, action: #selector(switchValueChanged(_:)), for: .valueChanged)
         
-
+        LocationManager.sharedInstance.checkLocationAuthorization()
     }
+    
     override func viewDidLoad() {
-        print("MapViewController loaded its view.")
+        
+        print("MapViewController has loaded its view.")
     }
     
     @objc func mapTypeChanged(_ segControl: UISegmentedControl){
