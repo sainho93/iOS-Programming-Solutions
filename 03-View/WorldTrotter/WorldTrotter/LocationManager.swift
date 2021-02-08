@@ -9,7 +9,8 @@
 import Foundation
 import CoreLocation
 
-class LocationManager: CLLocationManager, CLLocationManagerDelegate {
+
+class LocationManager: NSObject, CLLocationManagerDelegate {
     // Set Class as Singleton
     static let sharedInstance = LocationManager()
 
@@ -22,14 +23,21 @@ class LocationManager: CLLocationManager, CLLocationManagerDelegate {
         self.locationManager.delegate = self
     }
     
+    func systemLocationServicesEnabled() -> Bool {
+        if CLLocationManager.locationServicesEnabled() == true{
+            return true
+        }else{
+            return false
+        }
+    }
+
     func checkLocationAuthorization() {
-        if CLLocationManager.locationServicesEnabled() == false ||
-            self.locationManager.authorizationStatus != .authorizedWhenInUse {
+        if self.locationManager.authorizationStatus != .authorizedWhenInUse {
             self.locationManager.requestWhenInUseAuthorization()
         }
         
     }
-    
+
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager){
         let status = self.locationManager.authorizationStatus
 
@@ -45,11 +53,10 @@ class LocationManager: CLLocationManager, CLLocationManagerDelegate {
                 break
             case .authorizedWhenInUse:
                 break
-            
+
         @unknown default:
             // <#fatalError()#>
             break
         }
-    
     }
 }

@@ -2,6 +2,8 @@
 //  MapViewController.swift
 //  WorldTrotter
 //
+//  This view is contructed programmatically
+//
 //  Created by sainho on 27.01.21.
 //  Copyright © 2021 Big Nerd Ranch. All rights reserved.
 //
@@ -11,13 +13,16 @@ import UIKit
 import MapKit
 
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, MKMapViewDelegate {
     var mapView: MKMapView!
 
     override func loadView() {
         // Create a map view
         mapView = MKMapView()
-
+        mapView.showsUserLocation = true
+        mapView.delegate = self
+        mapView.setUserTrackingMode(MKUserTrackingMode.follow, animated: true)
+        
         // Set it as *the* view of this view controller
         self.view = mapView
         
@@ -72,12 +77,34 @@ class MapViewController: UIViewController {
         
         pointSwitch.addTarget(self, action: #selector(switchValueChanged(_:)), for: .valueChanged)
         
-        LocationManager.sharedInstance.checkLocationAuthorization()
     }
     
     override func viewDidLoad() {
-        
         print("MapViewController has loaded its view.")
+    }
+        
+    func checkLocationServices() {
+        guard LocationManager.sharedInstance.systemLocationServicesEnabled() else {
+            let alert = UIAlertController(title: "WorldTrotter works best with Location Services truned on", message: "You'll get your location when you turn on Location Services.", preferredStyle: .alert)
+            alert.addAction(
+                UIAlertAction(title: NSLocalizedString("Turn on in Setting", comment: "Default action"),
+                              style: .default,
+                              handler: {_ in
+                                NSLog("The \"Turn on in Setting\" alert occured.")
+                            }))
+            alert.addAction(
+                UIAlertAction(title: NSLocalizedString("Keep Location Services Off", comment: ""),
+                              style: .default,
+                              handler: {_ in
+                                NSLog("The \"Keep Location Services Off\" alert occured.")
+                              }))
+            self.present(alert, animated: true, completion: nil)
+            // TODO: 实现从弹窗跳转到系统设置的逻辑
+            return
+        }
+        
+        LocationManager.sharedInstance.checkLocationAuthorization()
+        
     }
     
     @objc func mapTypeChanged(_ segControl: UISegmentedControl){
@@ -105,5 +132,18 @@ class MapViewController: UIViewController {
                 mapView.pointOfInterestFilter = .some(filters)
                 
         }
+    }
+    
+    // MARK: Funcs in the MKMapViewDelegate
+    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation){
+        self.checkLocationServices()
+        
+        let userCoordinate = mapView.userLocation.coordinate
+        let radius: CLLocationDistance = 10
+        let region = MKCoordinateRegion(center: userCoordinate,
+                                        latitudinalMeters: radius,
+                                        longitudinalMeters: radius)
+        mapView.setRegion(region, animated: true)
+
     }
 }

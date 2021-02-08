@@ -41,7 +41,7 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad"/>
                                 <connections>
                                     <action selector="fahrenheitFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="cQO-D5-pMi"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="zOb-YG-n5G"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="wnC-Ro-ASI"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="degrees Fahrenheit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F8U-zD-3of">
@@ -91,15 +91,11 @@
         <scene sceneID="SFd-VO-w6U">
             <objects>
                 <viewController id="RzJ-Dj-czX" customClass="MapViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
-                    <mapView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="gYs-ij-ngs">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </mapView>
                     <tabBarItem key="tabBarItem" title="Map" image="MapIcon" id="1ZS-go-N0s"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pcV-Qg-FmP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1793.8461538461538" y="135.781990521327"/>
+            <point key="canvasLocation" x="1845" y="138"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="bN3-pZ-9cM">
