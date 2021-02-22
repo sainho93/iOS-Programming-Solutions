@@ -44,8 +44,8 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="wnC-Ro-ASI"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="degrees Fahrenheit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F8U-zD-3of">
-                                <rect key="frame" x="47.666666666666657" y="145.33333333333331" width="295" height="247.33333333333331"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="degrees Fahrenheit" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F8U-zD-3of">
+                                <rect key="frame" x="47.666666666666657" y="145.33333333333331" width="294.66666666666674" height="247.33333333333331"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" red="0.88235294117647056" green="0.34509803921568627" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -63,10 +63,12 @@
                             <constraint firstItem="WWc-Pa-TaH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="IYS-yR-ccH"/>
                             <constraint firstItem="bAK-V8-Goh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UcL-7q-tUN"/>
                             <constraint firstItem="xix-0n-B6R" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="ajy-Ao-daw"/>
+                            <constraint firstItem="F8U-zD-3of" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="31.666666666666657" id="bdc-tr-JZC"/>
                             <constraint firstItem="NG2-Hx-T8x" firstAttribute="top" secondItem="WWc-Pa-TaH" secondAttribute="bottom" constant="8" symbolic="YES" id="btr-fF-ltS"/>
                             <constraint firstItem="xix-0n-B6R" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c7f-Hk-Bhs"/>
                             <constraint firstItem="bAK-V8-Goh" firstAttribute="top" secondItem="NG2-Hx-T8x" secondAttribute="bottom" constant="8" symbolic="YES" id="kfO-GM-Kg4"/>
                             <constraint firstItem="F8U-zD-3of" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tgr-cL-fQp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="F8U-zD-3of" secondAttribute="trailing" constant="31.666666666666629" id="vv7-0u-F3Z"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="bd0-WP-SBb" appends="YES" id="jwv-EA-68j"/>
