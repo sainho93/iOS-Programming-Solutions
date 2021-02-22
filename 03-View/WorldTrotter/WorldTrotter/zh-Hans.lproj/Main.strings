@@ -1,0 +1,36 @@
+
+/* Class = "UITabBarItem"; title = "Map"; ObjectID = "1ZS-go-N0s"; */
+"1ZS-go-N0s.title" = "地图";
+
+/* Class = "UILabel"; text = "degrees Fahrenheit"; ObjectID = "F8U-zD-3of"; */
+"F8U-zD-3of.text" = "华氏度";
+
+/* Class = "UIButton"; normalTitle = "Next Question"; ObjectID = "IW4-Kd-FXx"; */
+"IW4-Kd-FXx.normalTitle" = "下一个问题";
+
+/* Class = "UILabel"; text = "100"; ObjectID = "NG2-Hx-T8x"; */
+"NG2-Hx-T8x.text" = "100";
+
+/* Class = "UILabel"; text = "is really"; ObjectID = "WWc-Pa-TaH"; */
+"WWc-Pa-TaH.text" = "是";
+
+/* Class = "UILabel"; text = "degrees Celsius"; ObjectID = "bAK-V8-Goh"; */
+"bAK-V8-Goh.text" = "摄氏度";
+
+/* Class = "UIButton"; normalTitle = "Show Answer"; ObjectID = "d80-V3-Kqu"; */
+"d80-V3-Kqu.normalTitle" = "公布答案";
+
+/* Class = "UITabBarItem"; title = "ConvertIcon"; ObjectID = "ew8-Db-cbE"; */
+"ew8-Db-cbE.title" = "温度转换";
+
+/* Class = "UILabel"; text = "???"; ObjectID = "lHv-AM-qKm"; */
+"lHv-AM-qKm.text" = "???";
+
+/* Class = "UILabel"; text = "???"; ObjectID = "vML-D8-otE"; */
+"vML-D8-otE.text" = "???";
+
+/* Class = "UITabBarItem"; title = "Quiz"; ObjectID = "ww2-Qg-bnL"; */
+"ww2-Qg-bnL.title" = "问答";
+
+/* Class = "UITextField"; placeholder = "Value"; ObjectID = "xix-0n-B6R"; */
+"xix-0n-B6R.placeholder" = "Value";

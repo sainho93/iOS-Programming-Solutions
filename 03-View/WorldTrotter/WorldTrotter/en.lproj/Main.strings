@@ -1,0 +1,36 @@
+
+/* Class = "UITabBarItem"; title = "Map"; ObjectID = "1ZS-go-N0s"; */
+"1ZS-go-N0s.title" = "Map";
+
+/* Class = "UILabel"; text = "degrees Fahrenheit"; ObjectID = "F8U-zD-3of"; */
+"F8U-zD-3of.text" = "degrees Fahrenheit";
+
+/* Class = "UIButton"; normalTitle = "Next Question"; ObjectID = "IW4-Kd-FXx"; */
+"IW4-Kd-FXx.normalTitle" = "Next Question";
+
+/* Class = "UILabel"; text = "100"; ObjectID = "NG2-Hx-T8x"; */
+"NG2-Hx-T8x.text" = "100";
+
+/* Class = "UILabel"; text = "is really"; ObjectID = "WWc-Pa-TaH"; */
+"WWc-Pa-TaH.text" = "is really";
+
+/* Class = "UILabel"; text = "degrees Celsius"; ObjectID = "bAK-V8-Goh"; */
+"bAK-V8-Goh.text" = "degrees Celsius";
+
+/* Class = "UIButton"; normalTitle = "Show Answer"; ObjectID = "d80-V3-Kqu"; */
+"d80-V3-Kqu.normalTitle" = "Show Answer";
+
+/* Class = "UITabBarItem"; title = "ConvertIcon"; ObjectID = "ew8-Db-cbE"; */
+"ew8-Db-cbE.title" = "ConvertIcon";
+
+/* Class = "UILabel"; text = "???"; ObjectID = "lHv-AM-qKm"; */
+"lHv-AM-qKm.text" = "???";
+
+/* Class = "UILabel"; text = "???"; ObjectID = "vML-D8-otE"; */
+"vML-D8-otE.text" = "???";
+
+/* Class = "UITabBarItem"; title = "Quiz"; ObjectID = "ww2-Qg-bnL"; */
+"ww2-Qg-bnL.title" = "Quiz";
+
+/* Class = "UITextField"; placeholder = "Value"; ObjectID = "xix-0n-B6R"; */
+"xix-0n-B6R.placeholder" = "Value";
