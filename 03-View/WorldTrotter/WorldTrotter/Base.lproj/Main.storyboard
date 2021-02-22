@@ -68,7 +68,6 @@
                             <constraint firstItem="xix-0n-B6R" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c7f-Hk-Bhs"/>
                             <constraint firstItem="bAK-V8-Goh" firstAttribute="top" secondItem="NG2-Hx-T8x" secondAttribute="bottom" constant="8" symbolic="YES" id="kfO-GM-Kg4"/>
                             <constraint firstItem="F8U-zD-3of" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tgr-cL-fQp"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="F8U-zD-3of" secondAttribute="trailing" constant="31.666666666666629" id="vv7-0u-F3Z"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="bd0-WP-SBb" appends="YES" id="jwv-EA-68j"/>

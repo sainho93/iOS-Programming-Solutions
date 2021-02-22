@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:09-TableViewControllers/LootLogger/LootLogger.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:08-Debugging/Buggy/Buggy.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:01-Simple/Quiz/Quiz.xcodeproj">
    </FileRef>
    <FileRef
