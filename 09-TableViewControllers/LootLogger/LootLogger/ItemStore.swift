@@ -6,15 +6,14 @@ import UIKit
 
 class ItemStore {
 
-    var allItems = [Item]()
+    var allItems: [Item]
+    let name: String
     
-    @discardableResult func createItem() -> Item {
-        let newItem = Item(random: true)
-
-        allItems.append(newItem)
-
-        return newItem
+    init(name: String) {
+        self.allItems = [Item]()
+        self.name = name
     }
+
     
     func removeItem(_ item: Item) {
         if let index = allItems.firstIndex(of: item) {
@@ -36,5 +35,4 @@ class ItemStore {
         // Insert item in array at new location
         allItems.insert(movedItem, at: toIndex)
     }
-
 }

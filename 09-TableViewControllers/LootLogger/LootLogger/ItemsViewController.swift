@@ -6,7 +6,7 @@ import UIKit
 
 class ItemsViewController: UITableViewController {
     
-    var itemStore: ItemStore!
+    var dataModel: DataModel!
     
     @IBAction func toggleEditingMode(_ sender: UIButton) {
         // If you are currently in editing mode...
@@ -27,22 +27,35 @@ class ItemsViewController: UITableViewController {
     
     @IBAction func addNewItem(_ sender: UIButton) {
         // Create a new item and add it to the store
-        let newItem = itemStore.createItem()
+        let newItem = dataModel.createItem()
 
         // Figure out where that item is in the array
-        // (Note: You will have an error on the next line; you will fix it soon)
-        if let index = itemStore.allItems.firstIndex(of: newItem) {
+        if let index = dataModel.ItemStores[0].allItems.firstIndex(of: newItem) {
             let indexPath = IndexPath(row: index, section: 0)
 
             // Insert this new row into the table
             tableView.insertRows(at: [indexPath], with: .automatic)
+        }else if let index = dataModel.ItemStores[1].allItems.firstIndex(of: newItem){
+            let indexPath = IndexPath(row: index, section: 1)
+
+            // Insert this new row into the table
+            tableView.insertRows(at: [indexPath], with: .automatic)
         }
-        
+    }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return self.dataModel.ItemStores.count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return itemStore.allItems.count
+        return self.dataModel.ItemStores[section].allItems.count
     }
+    
+    override func tableView(_ tableView: UITableView,
+        titleForHeaderInSection section: Int) -> String? {
+        return self.dataModel.ItemStores[section].name
+    }
+
     
     override func tableView(_ tableView: UITableView,
             cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -53,7 +66,7 @@ class ItemsViewController: UITableViewController {
         // Set the text on the cell with the description of the item
         // that is at the nth index of items, where n = row this cell
         // will appear in on the table view
-        let item = itemStore.allItems[indexPath.row]
+        let item = self.dataModel.ItemStores[indexPath.section].allItems[indexPath.row]
 
         cell.textLabel?.text = item.name
         cell.detailTextLabel?.text = "$\(item.valueInDollars)"
@@ -66,9 +79,9 @@ class ItemsViewController: UITableViewController {
                             forRowAt indexPath: IndexPath) {
         // If the table view is asking to commit a delete command...
         if editingStyle == .delete {
-            let item = itemStore.allItems[indexPath.row]
+            let item = self.dataModel.ItemStores[indexPath.section].allItems[indexPath.row]
             // Remove the item from the store
-            itemStore.removeItem(item)
+            self.dataModel.ItemStores[indexPath.section].removeItem(item)
 
             // Also remove that row from the table view with an animation
             tableView.deleteRows(at: [indexPath], with: .automatic)
@@ -79,7 +92,13 @@ class ItemsViewController: UITableViewController {
                             moveRowAt sourceIndexPath: IndexPath,
                             to destinationIndexPath: IndexPath) {
         // Update the model
-        itemStore.moveItem(from: sourceIndexPath.row, to: destinationIndexPath.row)
+        
+        if sourceIndexPath.section == destinationIndexPath.section{
+            self.dataModel.ItemStores[sourceIndexPath.section].moveItem(from: sourceIndexPath.row, to: destinationIndexPath.row)
+        }else{
+            tableView.reloadData()
+        }
+        
     }
 
 }

@@ -12,12 +12,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let _ = (scene as? UIWindowScene) else { return }
         
-        // Create an ItemStore
-        let itemStore = ItemStore()
+        // Create a DataModel
+        let dataModel = DataModel()
 
         // Access the ItemsViewController and set its item store
         let itemsController = window!.rootViewController as! ItemsViewController
-        itemsController.itemStore = itemStore
+        itemsController.dataModel = dataModel
+
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
