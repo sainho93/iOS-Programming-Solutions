@@ -18,6 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Access the ItemsViewController and set its item store
         let itemsController = window!.rootViewController as! ItemsViewController
         itemsController.dataModel = dataModel
+        
 
     }
 

@@ -27,21 +27,18 @@ class ItemsViewController: UITableViewController {
     
     @IBAction func addNewItem(_ sender: UIButton) {
         // Create a new item and add it to the store
+        
         let newItem = dataModel.createItem()
-
+        
         // Figure out where that item is in the array
-        if let index = dataModel.ItemStores[0].allItems.firstIndex(of: newItem) {
-            let indexPath = IndexPath(row: index, section: 0)
-
-            // Insert this new row into the table
-            tableView.insertRows(at: [indexPath], with: .automatic)
-        }else if let index = dataModel.ItemStores[1].allItems.firstIndex(of: newItem){
-            let indexPath = IndexPath(row: index, section: 1)
+        if let index = dataModel.ItemStores[newItem.section].allItems.firstIndex(of: newItem) {
+            let indexPath = IndexPath(row: index, section: newItem.section)
 
             // Insert this new row into the table
             tableView.insertRows(at: [indexPath], with: .automatic)
         }
     }
+
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return self.dataModel.ItemStores.count
@@ -55,7 +52,6 @@ class ItemsViewController: UITableViewController {
         titleForHeaderInSection section: Int) -> String? {
         return self.dataModel.ItemStores[section].name
     }
-
     
     override func tableView(_ tableView: UITableView,
             cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -66,22 +62,40 @@ class ItemsViewController: UITableViewController {
         // Set the text on the cell with the description of the item
         // that is at the nth index of items, where n = row this cell
         // will appear in on the table view
+        
         let item = self.dataModel.ItemStores[indexPath.section].allItems[indexPath.row]
-
+        
         cell.textLabel?.text = item.name
-        cell.detailTextLabel?.text = "$\(item.valueInDollars)"
-
+        
+        if item.valueInDollars != nil {
+            cell.detailTextLabel?.text = "$\(item.valueInDollars ?? 0)"
+        }else{
+            cell.detailTextLabel?.text = ""
+        }
+        
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let item = self.dataModel.ItemStores[indexPath.section].allItems[indexPath.row]
+        
+        if item.isDefault, self.dataModel.ItemStores[indexPath.section].allItems.count > 1{
+            return 0
+        }
+        
+        return self.tableView.rowHeight
     }
     
     override func tableView(_ tableView: UITableView,
                             commit editingStyle: UITableViewCell.EditingStyle,
                             forRowAt indexPath: IndexPath) {
         // If the table view is asking to commit a delete command...
-        if editingStyle == .delete {
+        let item = self.dataModel.ItemStores[indexPath.section].allItems[indexPath.row]
+        
+        if editingStyle == .delete, item.isDefault == false {
             let item = self.dataModel.ItemStores[indexPath.section].allItems[indexPath.row]
             // Remove the item from the store
-            self.dataModel.ItemStores[indexPath.section].removeItem(item)
+            self.dataModel.removeItem(item)
 
             // Also remove that row from the table view with an animation
             tableView.deleteRows(at: [indexPath], with: .automatic)
@@ -92,9 +106,10 @@ class ItemsViewController: UITableViewController {
                             moveRowAt sourceIndexPath: IndexPath,
                             to destinationIndexPath: IndexPath) {
         // Update the model
+        let item = self.dataModel.ItemStores[sourceIndexPath.section].allItems[sourceIndexPath.row]
         
-        if sourceIndexPath.section == destinationIndexPath.section{
-            self.dataModel.ItemStores[sourceIndexPath.section].moveItem(from: sourceIndexPath.row, to: destinationIndexPath.row)
+        if sourceIndexPath.section == destinationIndexPath.section, item.isDefault == false{
+            self.dataModel.moveItem(in: sourceIndexPath.section, from: sourceIndexPath.row, to: destinationIndexPath.row)
         }else{
             tableView.reloadData()
         }
