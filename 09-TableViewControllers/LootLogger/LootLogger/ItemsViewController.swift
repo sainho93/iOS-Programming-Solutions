@@ -38,6 +38,14 @@ class ItemsViewController: UITableViewController {
             tableView.insertRows(at: [indexPath], with: .automatic)
         }
     }
+    
+    private func handleMarkAsFavourite(itemAt indexPath: IndexPath){
+        let item = self.dataModel.ItemStores[indexPath.section].allItems[indexPath.row]
+        item.isFavorite = true
+
+        tableView.reloadData() // Update table
+        
+    }
 
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -65,7 +73,13 @@ class ItemsViewController: UITableViewController {
         
         let item = self.dataModel.ItemStores[indexPath.section].allItems[indexPath.row]
         
-        cell.textLabel?.text = item.name
+        if item.isFavorite{
+            cell.textLabel?.text = item.name + " (Favorite)"
+        }else
+        {
+            cell.textLabel?.text = item.name
+        }
+        
         
         if item.valueInDollars != nil {
             cell.detailTextLabel?.text = "$\(item.valueInDollars ?? 0)"
@@ -79,6 +93,7 @@ class ItemsViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let item = self.dataModel.ItemStores[indexPath.section].allItems[indexPath.row]
         
+        // Hide default item if there is items
         if item.isDefault, self.dataModel.ItemStores[indexPath.section].allItems.count > 1{
             return 0
         }
@@ -89,6 +104,7 @@ class ItemsViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool{
         let item = self.dataModel.ItemStores[indexPath.section].allItems[indexPath.row]
         
+        // Set default item as uneditable
         if item.isDefault, self.dataModel.ItemStores[indexPath.section].allItems.count == 1{
             return false
         }
@@ -115,15 +131,28 @@ class ItemsViewController: UITableViewController {
     override func tableView(_ tableView: UITableView,
                             moveRowAt sourceIndexPath: IndexPath,
                             to destinationIndexPath: IndexPath) {
-        // Update the model
         let item = self.dataModel.ItemStores[sourceIndexPath.section].allItems[sourceIndexPath.row]
         
         if sourceIndexPath.section == destinationIndexPath.section, item.isDefault == false{
+            // Move item in dataModel
             self.dataModel.moveItem(in: sourceIndexPath.section, from: sourceIndexPath.row, to: destinationIndexPath.row)
         }else{
+            // Update table if the movement is invaild
             tableView.reloadData()
         }
         
+    }
+    
+    override func tableView(_ tableView: UITableView,
+                            leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration?{
+        let action = UIContextualAction(style: .normal,
+                                        title: "Favourite") { [weak self] (action, view, completionHandler) in
+                                            self?.handleMarkAsFavourite(itemAt: indexPath)
+                                            completionHandler(true)
+        }
+        action.backgroundColor = .systemBlue
+        
+        return UISwipeActionsConfiguration(actions: [action])
     }
 
 }

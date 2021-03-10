@@ -11,6 +11,7 @@ class Item: Equatable {
     let dateCreated: Date
     let section: Int
     var isDefault: Bool
+    var isFavorite: Bool
     
     static func ==(lhs: Item, rhs: Item) -> Bool {
         return lhs.name == rhs.name
@@ -26,6 +27,7 @@ class Item: Equatable {
         self.dateCreated = Date()
         self.section = inSection
         self.isDefault = false
+        self.isFavorite = false
     }
     
     convenience init(random: Bool = false) {
