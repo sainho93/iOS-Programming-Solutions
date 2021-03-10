@@ -86,6 +86,16 @@ class ItemsViewController: UITableViewController {
         return self.tableView.rowHeight
     }
     
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool{
+        let item = self.dataModel.ItemStores[indexPath.section].allItems[indexPath.row]
+        
+        if item.isDefault, self.dataModel.ItemStores[indexPath.section].allItems.count == 1{
+            return false
+        }
+        
+        return true
+    }
+    
     override func tableView(_ tableView: UITableView,
                             commit editingStyle: UITableViewCell.EditingStyle,
                             forRowAt indexPath: IndexPath) {
