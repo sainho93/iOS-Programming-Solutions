@@ -2,3 +2,5 @@
 *.xcbkptlist
 xcuserdata
 *.pbxproj
+/09-TableViewControllers/LootLogger/LootLogger.xcodeproj/xcshareddata/
+*.xcworkspacedata
