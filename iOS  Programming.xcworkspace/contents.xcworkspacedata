@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/sainho/Repos/Solutions/11-StackViews/LootLogger/LootLogger 3.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:/Users/sainho/Repos/Solutions/10-TableViewCells/LootLogger/LootLogger 2.xcodeproj">
    </FileRef>
    <FileRef
