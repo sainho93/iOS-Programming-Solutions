@@ -51,6 +51,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         // "Save" changes to item
         item.name = nameField.text ?? ""
         item.serialNumber = serialNumberField.text
+        
 
         if let valueText = valueField.text,
             let value = numberFormatter.number(from: valueText) {
@@ -67,6 +68,18 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // If the triggered segue is the "changeDate" segue
+        switch segue.identifier {
+            case "changeDate"?:
+                let datePickerlViewController = segue.destination as! DatePickViewController
+                datePickerlViewController.item = item
+                
+            default:
+                preconditionFailure("Unexpected segue identifier.")
+        }
     }
 
 }

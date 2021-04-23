@@ -149,16 +149,25 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Z8Q-bS-XcU">
-                                        <rect key="frame" x="0.0" y="126" width="358" height="576"/>
+                                        <rect key="frame" x="0.0" y="126" width="358" height="538"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYa-vf-Taw">
-                                                <rect key="frame" x="0.0" y="0.0" width="358" height="576"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="358" height="538"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7v-Eg-Is4">
+                                        <rect key="frame" x="0.0" y="672" width="358" height="30"/>
+                                        <state key="normal" title="Change Date">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Fw0-RB-zcd" kind="show" identifier="changeDate" id="4Am-eR-EKz"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -197,6 +206,46 @@
             </objects>
             <point key="canvasLocation" x="2852.1739130434785" y="167.41071428571428"/>
         </scene>
+        <!--Date Pick View Controller-->
+        <scene sceneID="cAN-CT-0Nj">
+            <objects>
+                <viewController id="Fw0-RB-zcd" customClass="DatePickViewController" customModule="LootLogger_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9I0-Qb-yht">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="J1z-dy-G0D">
+                                <rect key="frame" x="35" y="314" width="320" height="216"/>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4PK-eL-Xji">
+                                <rect key="frame" x="180" y="560" width="30" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Ok">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveDate:" destination="Fw0-RB-zcd" eventType="touchUpInside" id="9wh-Si-QZb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Q9K-Fv-jy2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="J1z-dy-G0D" firstAttribute="centerX" secondItem="9I0-Qb-yht" secondAttribute="centerX" id="ddR-6N-jQ9"/>
+                            <constraint firstItem="4PK-eL-Xji" firstAttribute="top" secondItem="J1z-dy-G0D" secondAttribute="bottom" constant="30" id="dhT-xx-YoW"/>
+                            <constraint firstItem="J1z-dy-G0D" firstAttribute="centerY" secondItem="9I0-Qb-yht" secondAttribute="centerY" id="g6q-Ze-ynN"/>
+                            <constraint firstItem="4PK-eL-Xji" firstAttribute="centerX" secondItem="J1z-dy-G0D" secondAttribute="centerX" id="vZL-60-tck"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="RHx-60-pow"/>
+                    <connections>
+                        <outlet property="dataPicker" destination="J1z-dy-G0D" id="A3Z-qX-BeA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="egU-37-DUX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3706" y="161"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="1tb-mC-N2T">
             <objects>
@@ -217,6 +266,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

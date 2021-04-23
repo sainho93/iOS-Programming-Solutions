@@ -8,7 +8,7 @@ class Item: Equatable {
     var name: String
     var valueInDollars: Int
     var serialNumber: String?
-    let dateCreated: Date
+    var dateCreated: Date
     
     static func ==(lhs: Item, rhs: Item) -> Bool {
         return lhs.name == rhs.name
